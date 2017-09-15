@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">True False Quiz</string>
+    <string name="next">Next</string>
+    <string name="potato_question">Is a potato a potato?</string> 
+    <string name="math_question">1+1 = 2</string>
+    <string name="text_true">True</string>
+</resources>

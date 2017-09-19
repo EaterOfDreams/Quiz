@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">True False Quiz</string>
     <string name="next">Next</string>
-    <string name="potato_question">Is a potato a potato?</string> 
-    <string name="math_question">1+1 = 2</string>
+    <string name="q0">Will the means of production be seized?</string>
+    <string name="q1">Will the means of production be seized?</string>
+    <string name="q2">Will the means of production be seized?</string>
+    <string name="q3">Will the means of production be seized?</string>
     <string name="text_true">True</string>
+    <string name="text_false">False</string>
+    <string name="correct">Yes! Extra bread ration for you.</string>
 </resources>

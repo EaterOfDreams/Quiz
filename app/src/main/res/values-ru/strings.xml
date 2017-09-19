@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">True False Quiz</string>
-    <string name="next"></string>
+    <string name="app_name">Family Game App</string>
+    <string name="next">следующий!</string>
     <string name="correct">" Да! Дополнительный хлебный рацион для вас."</string>
+    <string name="text_false">Ложь!</string>
+    <string name="text_true">Правда!</string>
+    <string name="q0">Изъяты средства производства.</string>
+    <string name="q1">Миллион смертей - трагедийный товарищ.</string>
+    <string name="q2">" Капиталистическая сволочь продаст нам веревку, которую мы используем, чтобы повесить их."</string>
+    <string name="q3">Грязные фашисты разломат страну-мать.</string>
+    <string name="q4">Сталин является лидером \"свободного\" мира.</string>
 </resources>

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static com.example.per6.quiz.R.id.textView;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         index = 0;
         for (int i = 0; i < 4; i++)
             questionBank.add(new Questioning(getString(getResources().getIdentifier("q" + i, "string", getPackageName())), i, i % 2 == 0));
+        Collections.shuffle(questionBank);
+        questionText.setText(questionBank.get(index).getQuestionText());
     }
 
     private void wireWidgets() {
@@ -54,6 +57,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     score++;
                     Toast.makeText(MainActivity.this, R.string.correct, Toast.LENGTH_SHORT).show();
                 }
+                else{
+                    Toast.makeText(MainActivity.this, "No! Off to gulag.", Toast.LENGTH_SHORT).show();
+                    score--;
+                }
 
                 trueButton.setEnabled(false);
                 falseButton.setEnabled(false);
@@ -62,8 +69,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         falseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (questionBank.get(index).checkAnswer(false))
+                if (questionBank.get(index).checkAnswer(false)){
                     score++;
+                    Toast.makeText(MainActivity.this, R.string.correct, Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "No! Off to gulag.", Toast.LENGTH_SHORT).show();
+                    score--;
+                }
+
                 trueButton.setEnabled(false);
                 falseButton.setEnabled(false);
             }
@@ -71,7 +85,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                questionBank.get(++index);
+                index++;
+                if (questionBank.size() >= index-1){
+                    trueButton.setVisibility(View.INVISIBLE);
+                    falseButton.setVisibility(View.INVISIBLE);
+                    questionText.setText("Your score is:" + score);
+                }
                 questionText.setText(questionBank.get(index).getQuestionText());
                 trueButton.setEnabled(true);
                 falseButton.setEnabled(true);

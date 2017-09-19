@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">True False Quiz</string>
-    <string name="next">Next</string>
-    <string name="q0">Will the means of production be seized?</string>
-    <string name="q1">Will the means of production be seized?</string>
-    <string name="q2">Will the means of production be seized?</string>
-    <string name="q3">Will the means of production be seized?</string>
-    <string name="text_true">True</string>
-    <string name="text_false">False</string>
+    <string name="app_name">Family Game App</string>
+    <string name="next">Next!</string>
+    <string name="q0">Means of production be seized.</string>
+    <string name="q1">Million deaths are tragedy comrade.</string>
+    <string name="q2">Capitalist scum will sell us rope we use to hang them.</string>
+    <string name="q3">Dirty fascists will break mother country.</string>
+    <string name="q4">Leader of civilised world is glorious.</string>
+    <string name="text_true">True!</string>
+    <string name="text_false">False!</string>
     <string name="correct">Yes! Extra bread ration for you.</string>
 </resources>

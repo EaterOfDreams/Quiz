@@ -82,14 +82,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 falseButton.setEnabled(false);
             }
         });
-        nextButton.setOnClickListener(new View.OnClickListener() {
+                nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 index++;
-                if (questionBank.size() >= index-1){
-                    trueButton.setVisibility(View.INVISIBLE);
-                    falseButton.setVisibility(View.INVISIBLE);
-                    questionText.setText("Your score is:" + score);
+                if (questionBank.size() <= index-1) {
+//                    trueButton.setVisibility(View.INVISIBLE);
+//                    falseButton.setVisibility(View.INVISIBLE);
+//                    questionText.setText("Your score is:" + score);
+
                 }
                 questionText.setText(questionBank.get(index).getQuestionText());
                 trueButton.setEnabled(true);
